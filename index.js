@@ -14,7 +14,7 @@ process.on('SIGTERM', shutdown)
   .on('SIGINT', shutdown)
   .on('SIGHUP', shutdown)
   .on('uncaughtException', (err) => {
-    logger.error(`uncaughtException caught the error: ${JSON.stringify(err)}`);
+    logger.error('uncaughtException caught the error:', err);
     throw err;
   });
 
